@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '998288775958143');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=998288775958143&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Buenas Memorias — Reviva Suas Histórias</title>
@@ -28,7 +45,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);ove
   background:linear-gradient(90deg,#1C0A04,#2C1810,#1C0A04);
   color:#fff;font-family:'Poppins',sans-serif;
   font-size:.76rem;font-weight:600;
-  padding:9px 20px;display:flex;align-items:center;justify-content:center;
+  padding:10px 20px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;row-gap:4px;
   gap:12px;letter-spacing:.03em;
 }
 .ubar-long{font-size:.72rem;opacity:.85}
@@ -45,7 +62,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);ove
 
 /* ─── HEADER ─── */
 .hdr{
-  position:fixed;top:38px;left:0;right:0;z-index:1000;
+  position:fixed;top:50px;left:0;right:0;z-index:1000;
   padding:14px 36px;display:flex;align-items:center;justify-content:space-between;
   transition:background .4s,box-shadow .4s,top .4s;
 }
@@ -1007,9 +1024,9 @@ footer{background:#160800;padding:60px 24px 32px;color:rgba(255,255,255,.42)}
 
 <!-- URGENCY BAR -->
 <div class="ubar" id="ubar">
-  <span class="ubar-long">Pedidos especiais com oferta do Dia das Mães — reajuste no tempo pela quantidade de pedidos</span>
+  <span class="ubar-long">Desconto especial para você tirar suas fotos da gaveta e trazê-las de volta a vida! — reajuste no tempo pela quantidade de pedidos</span>
   <span class="ubar-timer" id="utimer">28:47</span>
-  <span class="ubar-pill">Vagas restantes hoje</span>
+  <span class="ubar-pill">Últimos pedidos restantes</span>
 </div>
 
 <!-- HEADER -->
@@ -1829,7 +1846,7 @@ const ubar=document.getElementById('ubar');
 window.addEventListener('scroll',function(){
   const y=window.scrollY;
   hdr.classList.toggle('scrolled',y>60);
-  hdr.style.top=y>80?'0':'38px';
+  hdr.style.top=y>80?'0':'50px';
 },{passive:true});
 hdr.style.top='38px';
 
